@@ -1,8 +1,10 @@
 # dependencies
 client/node_modules
+.env
 
 # production build
 /build
 
 # misc
 .DS_Store
+.eslintcache
