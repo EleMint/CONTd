@@ -6,5 +6,6 @@ client/node_modules
 /build
 
 # misc
+ref
 .DS_Store
 .eslintcache
