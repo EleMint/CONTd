@@ -14,6 +14,8 @@ export const Login = () => {
     const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
 
+        if (email.trim() === "" || password.trim() === "") return
+
         authenticate(email, password)
             .then(resp => {
                 sessionStorage.setItem("userConfirmed", resp.userConfirmationNecessary ? "true" : "false")

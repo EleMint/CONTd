@@ -72,6 +72,15 @@ export const Account = (props: AccountProps) => {
                     setIsAuthenticated(false)
                     setIsLoading(false)
                     reject(err)
+                },
+                newPasswordRequired: (_userAttributes, requiredAttributes) => {
+                    console.warn("New password required")
+                    if (requiredAttributes && Array.isArray(requiredAttributes) && requiredAttributes.length !== 0) {
+                        console.warn("RequiredAttributes:", requiredAttributes)
+                    }
+                    setIsAuthenticated(false)
+                    setIsLoading(false)
+                    reject("new password required")
                 }
             })
         })
